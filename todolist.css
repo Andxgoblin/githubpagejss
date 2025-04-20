@@ -1,0 +1,226 @@
+/* =============================================
+   ESTILOS PRINCIPALES
+   ============================================= */
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #f5f7ff;
+    color: #2b2d42;
+    line-height: 1.6;
+}
+
+/* Barra de navegación */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    background-color: white;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #4361ee;
+}
+
+#config-icon {
+    border: none;
+    color: #4361ee;
+    font-size: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+#config-icon:hover {
+    transform: rotate(30deg);
+    background-color: transparent;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 800px;
+}
+
+/* Tarjetas de formulario y lista */
+.form-card,
+.task-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.form-card:hover,
+.task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Títulos */
+.main-title {
+    color: #4361ee;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.main-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #4361ee, #4cc9f0);
+    border-radius: 2px;
+}
+
+/* Campos de formulario */
+.form-input {
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 12px 15px;
+    width: 100%;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #4361ee;
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+    outline: none;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #2b2d42;
+}
+
+/* Botones */
+.primary-btn {
+    background-color: #4361ee;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.primary-btn:hover {
+    background-color: #3a0ca3;
+    transform: translateY(-2px);
+}
+
+/* Lista de tareas */
+.task-list {
+    list-style: none;
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.task-item {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.task-item:hover {
+    background-color: #f8f9fa;
+}
+
+.task-text {
+    flex-grow: 1;
+}
+
+.task-date {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-top: 0.25rem;
+}
+
+.task-actions button {
+    background: none;
+    border: none;
+    color: #6c757d;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.task-actions button:hover {
+    color: #4361ee;
+}
+
+/* Modal de configuración */
+.config-modal {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Footer */
+.page-footer {
+    text-align: center;
+    color: #6c757d;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+}
+
+/* =============================================
+     DISEÑO RESPONSIVE
+     ============================================= */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .main-title {
+        font-size: 1.8rem;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-actions {
+        margin-top: 1rem;
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        padding: 0.75rem 1rem;
+    }
+
+    .form-card,
+    .task-card {
+        padding: 1.5rem;
+    }
+
+    .form-input {
+        padding: 10px 12px;
+    }
+}

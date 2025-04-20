@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicación de lista de tareas para organizar tus pendientes.">
+    <meta name="author" content="Tu Nombre">
+    <meta name="keywords" content="To-Do List, Lista de Tareas, Organización, Productividad">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>To-Do List</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="todolist.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container-fluid">
+            <span class="navbar-brand">Bienvenido, <span id="usuario-navbar">Usuario</span></span>
+            <button class="btn btn-outline-secondary" id="config-icon">
+                <i class="bi bi-gear-fill"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <!-- Formulario para agregar tareas -->
+                <form class="form-card bg-white p-4 rounded shadow mb-4">
+                    <h1 class="main-title text-center mb-4">Lista de tareas</h1>
+                    <div class="mb-3">
+                        <label for="tarea" class="form-label">Ingrese la tarea:</label>
+                        <input type="text" id="tarea" class="form-control" placeholder="Escriba su tarea aquí..."
+                            required>
+                        <small id="errorTarea" class="form-text text-danger"></small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fecha" class="form-label">Fecha de la tarea:</label>
+                        <input type="date" id="fecha" class="form-control" required>
+                        <small id="errorFecha" class="form-text text-danger"></small>
+                    </div>
+                    <button type="button" id="validar" class="btn primary-btn w-100">Añadir</button>
+                </form>
+
+                <!-- Contenedor para mostrar las tareas -->
+                <div id="listaTareas" class="task-card bg-white p-4 rounded shadow">
+                    <h2 class="main-title text-center mb-4">Tareas Pendientes</h2>
+                    <ul class="task-list list-group" id="tareasPendientes">
+                        <!-- Las tareas se agregarán aquí dinámicamente -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de configuración -->
+    <div id="configModal"
+        style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border: 1px solid #ccc; border-radius: 8px; z-index: 1000;">
+        <h4>Configuración</h4>
+        <div class="mb-3">
+            <label for="bgColor" class="form-label">Color de fondo:</label>
+            <input type="color" id="bgColor" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="fontFamily" class="form-label">Fuente:</label>
+            <select id="fontFamily" class="form-control">
+                <option value="Arial">Arial</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Courier New">Courier New</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="fontSize" class="form-label">Tamaño de fuente:</label>
+            <input type="number" id="fontSize" class="form-control" placeholder="16">
+        </div>
+        <div class="d-flex justify-content-between">
+            <button id="applyConfig" class="btn btn-success">Aplicar</button>
+            <button id="closeConfig" class="btn btn-danger">Cerrar</button>
+        </div>
+        <button id="resetConfig" class="btn btn-secondary mt-3 w-100">Restablecer valores</button>
+    </div>
+    <footer>
+        <div class="text-center mt-4">
+            <p>&copy; 2023 Bayrol Muñoz. Todos los derechos reservados.</p>
+            <p>Desarrollado por Bayrol Muñoz y ayuda de la IA con el diseño 😁😁👍</p>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="validacion2.js"></script>
+</body>
+
+</html>

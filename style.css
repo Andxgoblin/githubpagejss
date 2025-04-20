@@ -1,0 +1,279 @@
+/* =============================================
+   ESTILOS GENERALES 
+   ============================================= */
+
+/* Fondo con gradiente suave para una apariencia moderna */
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    /* Fuentes modernas */
+    min-height: 100vh;
+    /* Ocupa al menos toda la altura de la pantalla */
+    padding-top: 2rem;
+    /* Espaciado superior */
+    margin: 0;
+    color: #333;
+    /* Color de texto principal */
+}
+
+/* Contenedor principal con ancho máximo para buena legibilidad */
+.container {
+    max-width: 1200px;
+    /* Máximo ancho del contenido */
+    margin: 0 auto;
+    /* Centrado horizontal */
+}
+
+/* =============================================
+   ESTILOS DEL FORMULARIO 
+   ============================================= */
+
+/* Contenedor del formulario con efecto de "tarjeta" */
+form {
+    background: rgba(255, 255, 255, 0.95);
+    /* Blanco con ligera transparencia */
+    border-radius: 12px;
+    /* Esquinas redondeadas */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+    padding: 2.5rem;
+    /* Espaciado interno generoso */
+    margin: 0 auto;
+    /* Centrado horizontal */
+    transition: all 0.3s ease;
+    /* Transición suave para efectos hover */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Borde casi imperceptible */
+}
+
+/* Efecto hover para dar feedback visual */
+form:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    /* Sombra más pronunciada al pasar el mouse */
+}
+
+/* =============================================
+   ENCABEZADO DEL FORMULARIO 
+   ============================================= */
+
+form header h1 {
+    font-size: 2.2rem;
+    /* Tamaño grande para el título */
+    font-weight: 700;
+    /* Negrita */
+    color: #2c3e50;
+    /* Color oscuro para buen contraste */
+    margin-bottom: 1.5rem;
+    /* Espaciado inferior */
+    text-transform: uppercase;
+    /* Mayúsculas para estilo formal */
+    letter-spacing: 1px;
+    /* Espaciado entre letras */
+    position: relative;
+    /* Necesario para el pseudo-elemento */
+    padding-bottom: 0.5rem;
+    /* Espacio para la línea decorativa */
+}
+
+/* Línea decorativa bajo el título */
+form header h1::after {
+    content: '';
+    /* Requerido para pseudo-elementos */
+    position: absolute;
+    /* Posicionamiento relativo al h1 */
+    bottom: 0;
+    /* Alineado al fondo del h1 */
+    left: 50%;
+    /* Centrado horizontal */
+    transform: translateX(-50%);
+    /* Centrado preciso */
+    width: 80px;
+    /* Ancho de la línea */
+    height: 4px;
+    /* Grosor de la línea */
+    background: #28a745;
+    /* Color verde que combina con el botón */
+    border-radius: 2px;
+    /* Esquinas ligeramente redondeadas */
+}
+
+/* =============================================
+   CAMPOS DEL FORMULARIO 
+   ============================================= */
+
+/* Etiquetas de los campos */
+.form-label {
+    font-weight: 600;
+    /* Semi-negrita */
+    color: #2c3e50;
+    /* Color oscuro */
+    margin-bottom: 0.5rem;
+    /* Espaciado inferior */
+    display: block;
+    /* Para que ocupen su propia línea */
+}
+
+/* Campos de entrada */
+.form-control {
+    border: 2px solid #e0e0e0;
+    /* Borde sutil */
+    border-radius: 8px;
+    /* Esquinas redondeadas */
+    padding: 12px 15px;
+    /* Espaciado interno cómodo */
+    font-size: 1rem;
+    /* Tamaño de fuente estándar */
+    transition: all 0.3s ease;
+    /* Transición suave */
+    height: auto;
+    /* Altura automática */
+    background-color: #f8f9fa;
+    /* Fondo ligeramente gris */
+}
+
+/* Efecto cuando el campo está enfocado */
+.form-control:focus {
+    border-color: #28a745;
+    /* Borde verde para coincidir con el botón */
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2);
+    /* Sombra difuminada verde */
+    background-color: #fff;
+    /* Fondo blanco al enfocar */
+}
+
+/* =============================================
+   MENSAJES DE ERROR (actualmente ocultos) 
+   ============================================= */
+.form-text {
+    font-size: 0.85rem;
+    /* Tamaño pequeño */
+    margin-top: 0.25rem;
+    /* Espaciado superior mínimo */
+    display: none;
+    /* Ocultos por defecto (se mostrarían con JavaScript) */
+}
+
+/* =============================================
+   BOTÓN PRINCIPAL 
+   ============================================= */
+.btn-success {
+    background-color: #28a745;
+    /* Verde vibrante */
+    border: none;
+    /* Sin borde */
+    border-radius: 8px;
+    /* Esquinas redondeadas */
+    padding: 12px 24px;
+    /* Espaciado interno generoso */
+    font-size: 1.1rem;
+    /* Tamaño de fuente ligeramente mayor */
+    font-weight: 600;
+    /* Negrita */
+    letter-spacing: 0.5px;
+    /* Espaciado entre letras */
+    transition: all 0.3s ease;
+    /* Transición suave */
+    margin-top: 1rem;
+    /* Espaciado superior */
+    text-transform: uppercase;
+    /* Texto en mayúsculas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+}
+
+/* Efecto hover para el botón */
+.btn-success:hover {
+    background-color: #218838;
+    /* Verde más oscuro */
+    transform: translateY(-2px);
+    /* Efecto de levitación */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    /* Sombra más pronunciada */
+}
+
+/* Efecto cuando se hace clic */
+.btn-success:active {
+    transform: translateY(0);
+    /* Vuelve a su posición original */
+}
+
+/* Icono dentro del botón */
+.bi-person-plus {
+    margin-right: 8px;
+    /* Espaciado a la derecha del icono */
+}
+
+/* =============================================
+   FOOTER (PIE DE PÁGINA) 
+   ============================================= */
+footer {
+    background: rgba(0, 0, 0, 0.05);
+    /* Fondo semitransparente */
+    color: #6c757d;
+    /* Color de texto gris */
+    text-align: center;
+    /* Texto centrado */
+    padding: 1.5rem 0;
+    /* Espaciado vertical */
+    margin-top: 3rem;
+    /* Margen superior grande */
+    font-size: 0.9rem;
+    /* Tamaño de fuente pequeño */
+}
+
+/* Párrafos dentro del footer */
+footer p {
+    margin: 0.3rem 0;
+    /* Margen vertical entre párrafos */
+}
+
+/* =============================================
+   DISEÑO RESPONSIVE
+   ============================================= */
+
+/* Tablet (768px o menos) */
+@media (max-width: 768px) {
+    form {
+        padding: 1.5rem;
+        /* Menos padding en tablet */
+    }
+
+    form header h1 {
+        font-size: 1.8rem;
+        /* Título más pequeño */
+    }
+
+    .btn-success {
+        width: 100% !important;
+        /* Botón ocupa todo el ancho */
+    }
+}
+
+/* Móvil (576px o menos) */
+@media (max-width: 576px) {
+    body {
+        padding: 1rem;
+        /* Menos padding en móviles */
+    }
+
+    form {
+        padding: 1.25rem;
+        /* Padding aún más reducido */
+    }
+
+    form header h1 {
+        font-size: 1.5rem;
+        /* Título más pequeño para móviles */
+    }
+}
+
+/* Asegura que los mensajes de error sean visibles */
+#errorUser,
+#errorPass {
+    display: block !important;
+    /* Fuerza la visualización */
+    font-size: 0.875em;
+    /* Tamaño similar a Bootstrap */
+    margin-top: 0.25rem;
+    /* Espaciado coherente */
+}
